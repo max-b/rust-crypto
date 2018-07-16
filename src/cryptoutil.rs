@@ -442,8 +442,8 @@ macro_rules! impl_fixed_buffer( ($name:ident, $size:expr) => (
 /// A fixed size buffer of 64 bytes useful for cryptographic operations.
 #[derive(Copy)]
 pub struct FixedBuffer64 {
-    buffer: [u8; 64],
-    buffer_idx: usize,
+    pub buffer: [u8; 64],
+    pub buffer_idx: usize,
 }
 
 impl Clone for FixedBuffer64 { fn clone(&self) -> FixedBuffer64 { *self } }

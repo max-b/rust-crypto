@@ -381,10 +381,10 @@ fn mk_result(st: &mut Sha1, rs: &mut [u8]) {
 /// Structure representing the state of a Sha1 computation
 #[derive(Clone, Copy)]
 pub struct Sha1 {
-    h: [u32; STATE_LEN],
-    length_bits: u64,
-    buffer: FixedBuffer64,
-    computed: bool,
+    pub h: [u32; STATE_LEN],
+    pub length_bits: u64,
+    pub buffer: FixedBuffer64,
+    pub computed: bool,
 }
 
 impl Sha1 {
